@@ -1,0 +1,26 @@
+{
+	"compilerOptions": {
+		"target": "es2015",
+		"module": "ex2015",
+		"allowJs": true,
+		"checkJs": true,
+    "lib": ["ex2015", "dom"],
+		"maxNodeModuleJsDepth": 2,
+    "moduleResolution": "node",
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"strict": false,
+		"skipLibCheck": true,
+    "exclude": ["node_modules"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./front/srcs/*"]
+    },
+    "rules": {
+      "@typescript-eslint/ban-ts-comment": [
+        "error",
+        {"ban-ts-ignore": true }
+      ]
+    }
+  }
+}

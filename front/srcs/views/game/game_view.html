@@ -1,0 +1,227 @@
+<game-view class="page">
+  <style type="text/css">
+@import url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap");
+
+    #close-alert {
+      padding: 20px;
+      padding-left: 10%;
+      background-color: #f44336; 
+      color: white;
+      margin-bottom: 15px;
+      position: absolute;
+      z-index: 3;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 80px;
+      font-size: 20px;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+      box-shadow: rgba(93, 14, 65, 0.5) 0px 20px 30px -10px;
+      transform: translateY(-150%);
+    }
+
+    .close-alert-button {
+      margin-left: 15px;
+      margin-right: 15px;
+      color: white;
+      font-weight: bold;
+      float: right;
+      font-size: 22px;
+      line-height: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .close-alert-button:hover {
+      color: black;
+    }
+
+    .game-topbar {
+      background-color: #303D29;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      height: 100px;
+    }
+    .logo-image {
+      width: 150px;
+      margin-top: 0.2em;
+      height: auto;
+    }
+    .top-bar-button{
+      display: inline-block;
+      position: relative;
+      text-align: center;
+      visibility: hidden;
+      margin: 0.5em;
+      font-weight: bold;
+      padding: 0.5em;
+      padding-left: 0.8em;
+      padding-right: 0.8em;
+      background-color: white;
+      text-shadow: -1px -1px black, 1px 1px gray;
+      color: black;
+      -webkit-border-radius: 7px;
+      -moz-border-radius: 7px;
+      -o-border-radius: 7px;
+      border-radius: 7px;
+      box-shadow: 0 .2em gray; 
+      cursor: pointer;
+    }
+    .top-bar-button>span {
+      display: none;
+    }
+    .top-bar-button:hover>span {
+      display: inline-block;
+      position: absolute;
+      min-width: 150px;
+      top: 3em;
+      left: 0.3em;
+      color: white;
+      background-color: #303D29;
+      border-radius: 10px;
+      padding: 0 0.5em;
+    }
+    #score-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-direction: row;
+      padding: 0.5em;
+    }
+    .container-for-player {
+      margin: 0.5em 1.5em;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    .container-for-player>span {
+      font-width: bold;
+      margin-left: 0.5em;
+    }
+    .score-placeholder{
+      background: white;
+      color: #303D29;
+      border-radius: 5px;
+      padding: 0.5em;
+      padding-left: 1em;
+      padding-right: 1em;
+      margin-right: 0.5em;
+      text-align: center;
+      font-family: "Silkscreen", cursive;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 1em;
+    }
+    .player-nickname {
+      margin-left: 3em;
+    }
+    .canvas-container {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+    }
+    #game-canvas
+      {
+      top: 0;
+      left: 0;
+      outline: none;
+    }
+    .floating-button {
+      position: absolute;
+      background-color: transparent;
+      border: 0;
+      width: 5em;
+      height: 5em;
+      opacity: 0.7;
+    }
+    
+    .floating-button:hover {
+      opacity: 1;
+    }
+
+    .floating-button>img {
+      object-fit: fill;
+      border-radius: 50%;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5), 0 6px 20px 0 rgba(0,0,0,0.5);
+    }
+
+    #tournament-button {
+      top: 5em;
+      left: 1em;
+    }
+    #tournament-button>img {
+      width: 100%;
+      height: 90%;
+    }
+    #return-game-button {
+      top: 5em;
+      right: 1em;
+    }
+    #return-game-button>img {
+      width: 100%;
+      height: 90%;
+    }
+
+    #help-icon {
+      font-size: 30px;
+      padding-left: 8px;
+      padding-right: 8px;
+      background-color: white;
+      border-radius: 50%;
+    }
+
+    #help-text {
+      display: none;
+      position: absolute;
+      background-color: rgb(0, 0, 0,0.7);
+      border-radius: 2em;
+      font-size: 0.8em;
+      color: white;
+    }
+
+    #help-icon:hover>#help-text {
+      display: inline;
+      padding: 1em 2em;
+      top: 7%;
+      right: 5%;
+      max-width: 40%;
+      z-index: 1;
+    }
+
+  </style>
+  <div id="close-alert">
+    <span id="close-button" 
+      class="close-alert-button">종료하기</span> 
+    <span id="cancel-button"
+          class="close-alert-button">계속하기</span> 
+    게임을 종료하시겠습니까?
+  </div>
+  <div class="game-topbar">
+    <img src="./srcs/assets/logo.svg" alt="logo" class="d-inline-block align-text-top logo-image">
+    <div id="score-container" 
+         data-for="player in currentPlayers">
+      <div class="container-for-player">
+      <span style="color:white;" class="player-nickname">{{player.nickname}}</span>
+      <span class="score-placeholder" 
+            data-player={{player.nickname}}>0</span>
+      </div>
+    </div>
+    <button id="start-button" class="top-bar-button">Start
+      <span>You can press enter </span></button>
+    <button id="reset-button" class="top-bar-button">Reset
+      <span>Reset ball position</span></button>
+    <div id="help-icon">❓<p id="help-text"/></div>
+  </div>
+  <div class="canvas-container">
+    <canvas id="game-canvas"></canvas>
+    <button id="tournament-button" class="floating-button">
+      <img src="srcs/assets/icon/tournament_icon.png">
+    </button>
+    <button id="return-game-button" class="floating-button">
+      <img src="srcs/assets/icon/pong_game_icon.png">
+    </button>
+  </div>
+</game-view>

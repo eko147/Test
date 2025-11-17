@@ -1,0 +1,23 @@
+<mode-view class="d-flex view">
+  <div class="mb-auto ms-5 mt-5">
+    <div class="page-header d-flex justify-content-between">
+      <h1 class="page-name mode-view">모드 선택</h1>
+      <button id="move-to-home">
+        <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path d="M257-185v-73h322q68 0 116-47.5T743-421q0-67-48-115t-116-48H282l109 109-51 50-196-195 196-196 51 50-109 109h296q98 0 168 69t70 167q0 99-70 167.5T578-185H257Z"/></svg>
+      </button>
+    </div>
+    <div class="d-flex justify-content-center align-self-center">
+      <div class="d-flex flex-column p-4 justify-content-start align-items-center mode-box">
+        <h2 class="mode-header">LOCAL</h2>
+        <a class="d-flex btn btn-primary btn-mode align-items-center justify-content-center" href="/match" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="1:1 게임의 경험치는 사용자(player1)에게 적용됩니다." data-link>1 : 1</a>
+        <a class="d-flex btn btn-primary btn-mode align-items-center justify-content-center" href="/tournament" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="토너먼트 게임의 경험치는 적용되지 않습니다." data-link>토너먼트</a>
+        <div class="explain-text"></div>
+      </div>
+    </div>
+  </div>
+  <div class="loading-wrap" style="display: none;">
+    <div class="loading-spinner my-5"></div>
+    <p id="loadingMessage" class="mt-5 loading-message">공 빠닥빠닥 광 내는 중...</p>
+    <a href="/match" data-link></a>
+  </div>
+</mode-view>

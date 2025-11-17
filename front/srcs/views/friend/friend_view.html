@@ -1,0 +1,36 @@
+<friend-view class="d-flex flex-column justify-content-start view">
+	<div>
+		<nav-bar data-component="NavBar"></nav-bar>
+	</div>
+	<div class="mb-auto">
+		<div class="d-flex my-5 mx-5">
+			<h1 class="me-5 page-name">친구 목록</h1>
+			<div class="col-md-4">
+				<div class="input-group">
+					<span class="input-group-text" id="basic-addon1">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+							<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"></path>
+  						</svg>
+					</span>
+				  <input type="text" id="search-friend" class="form-control" placeholder="검색할 id를 입력하라" aria-label="Input group example" aria-describedby="basic-addon1">
+				  <p class="mb-0 align-items-center warning-message" style="display: none"></p>
+				</div>
+			</div>
+		</div>
+		<div class="d-flex justify-content-center">
+			<ul class="d-flex flex-column justify-content-start friend-list scroll align-self-center">
+				<template id="list-item-template">
+					<li class="d-flex py-2 my-1 friend-list-element">
+						<img src="" style="width:3em; height:3em; border-radius: 50%;" id="profileCardModalBtn" class="img-button mx-3">
+						<div class="status-circle-sm"></div>
+						<div class="mb-0 mx-2 align-self-center">
+							<span class="me-2 user-level"></span>
+							<span class="user-name"></span>
+						</div>
+					</li>
+				</template>
+			</ul>
+		</div>
+	</div>
+</friend-view>
+  

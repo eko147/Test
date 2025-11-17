@@ -1,0 +1,11 @@
+Model Information:
+* title:	Vintage Computer
+* source:	https://sketchfab.com/3d-models/vintage-computer-563fe5d2fb2a48feb1b2cc7c28ebb2c1
+* author:	explainedlake98 (https://sketchfab.com/explainedlake98)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Vintage Computer" (https://sketchfab.com/3d-models/vintage-computer-563fe5d2fb2a48feb1b2cc7c28ebb2c1) by explainedlake98 (https://sketchfab.com/explainedlake98) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

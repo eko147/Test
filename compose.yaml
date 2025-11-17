@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  front:
+    container_name: nginx
+    image: nginx
+    pull_policy: never
+    build: ./front/nginx/
+    restart: always
+    ports:
+      - 8080:8080
+      - 443:443
+    volumes:
+      - fe-vol:/var/www/html/srcs
+
+volumes:
+  fe-vol:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: ${FE_VOL_PATH}
+    

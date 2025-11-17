@@ -1,0 +1,52 @@
+<map-selector>
+	<style>
+		#map-selector-background {
+			display: flex;
+			position: fixed;
+			z-index: 10;
+			left: 0;
+			top: 0;
+      width: 100vw;
+      height: 100vh;
+			overflow: auto;
+			background-color: rgba(0, 0, 0, 0.4);
+		}
+		#map-selector-container {
+			transition: all 0.1s;
+			position: fixed;
+			top: 50%;
+			left: 40%;
+      width: 80%;
+      height: 60%;
+			transform: translate(-40%, -50%);
+			background-color: #ECEEE7;
+			border-radius: 1em;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 0.5em;
+		}
+    #map-selector-close-button {
+      position: fixed;
+      top: 1em;
+      right: 1em;
+    }
+    .map-preview {
+      width: 200px;
+      height: 200px;
+      margin: 0.5em 1em;
+    }
+    .map-preview:hover {
+      border: thick double #303D29;
+      border-width: 0.5em;
+    }
+	</style>
+	<div class="justify-content-center" 
+       id="map-selector">
+		<div id="map-selector-background">
+			<div id="map-selector-container" class="justify-content-center">
+        <button id="map-selector-close-button" type="button" class="btn-close ms-auto"></button>
+			</div>
+		</div>
+	</div>
+</map-selector>

@@ -1,0 +1,90 @@
+<match-view class="d-flex flex-column justify-content-center view">
+  <div class="d-flex my-5 mx-5 mb-2 d-flex justify-content-between">
+    <h1 class="me-5 page-name">Online 1 : 1</h1>
+    <button id="move-to-mode">
+      <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path d="M257-185v-73h322q68 0 116-47.5T743-421q0-67-48-115t-116-48H282l109 109-51 50-196-195 196-196 51 50-109 109h296q98 0 168 69t70 167q0 99-70 167.5T578-185H257Z"/></svg>
+    </button>
+  </div>
+	<div class="mb-auto match-container d-flex flex-column justify-content-center">
+		<div class="d-flex justify-content-center match-card-container">
+      <div class="d-flex profile-card-record flex-column justify-content-between align-items-center mx-5 mt-3 match-player-card">
+        <div class="d-flex justify-content-center">
+          <img class="user-avatar-match" src=""alt="user image">
+        </div>
+        <div class="d-flex align-items-center justify-content-center my-2 ">
+          <p class="px-1 mb-0 user-level-id"></p>
+        </div>
+        <div class="d-flex justify-content-center my-2 px-2">
+          <p class="score px-2 mb-0"></p>
+        </div>
+        <div class="user-message-record d-flex justify-content-center align-items-center">
+          <p class="my-1 state-message"></p>
+        </div>
+      </div>
+      <div class="mx-2" style="color: #7D9F56; margin-top: auto; margin-bottom:auto; font-size: 3em;">VS</div>
+      <div class="d-flex profile-card-record flex-column justify-content-between align-items-center mx-5 mt-3 match-player-card">
+        <div class="d-flex justify-content-center">
+          <img class="user-avatar-match"
+            src="srcs/assets/favicon.ico"
+            alt="guest image">
+        </div>
+        <div class="d-flex align-items-center justify-content-center my-2">
+          <p class="px-1 mb-0 user-name">GUEST</p>
+        </div>
+        <div class="user-message-record d-flex justify-content-center align-items-center">
+          <p class="my-1 state-message">도전을 받으시오</p>
+        </div>
+      </div>
+		</div>
+    <div class="d-flex flex-column justify-content-center align-items-center setting-container">
+      <div class="d-flex justify-content-center align-items-center game-config">
+        <div class="d-flex align-items-center my-auto text-secondary">
+          <span class="mx-2">⚙️ 게임 설정</span>
+        </div>
+        <div>
+          <div id="map-modal" style="display: none;" >
+            <map-selector data-component="MapSelector"></map-selector>
+          </div>
+          <button id="confMapBtn" class="btn btn-primary ms-4">맵</button>
+          <button id="confPaddleBtn" class="btn btn-primary ms-4">패들 속도</button>
+          <button id="confItemBtn" class="btn btn-primary ms-4">아이템</button>
+        </div>
+      </div>
+      <div class="d-flex justify-content-end game-play">
+        <a href="/game" class="btn btn-primary btn-play" data-link>PLAY</a>
+      </div>
+    </div>
+	</div>
+  <div class="map-wrap match-modal" style="display: none;">
+    <div class="map-modal d-flex flex-column justify-content-center">
+      <div class="d-flex justify-content-between">
+        <span>맵</span>
+        <button type="button" class="btn-close ms-auto"></button>
+      </div>
+      <button type="submit" class="btn btn-primary submit"></button>
+    </div>
+  </div>
+  <div class="paddle-wrap match-modal" style="display: none;">
+    <div class="map-modal d-flex flex-column justify-content-center">
+      <div class="d-flex justify-content-between">
+        <span>패들 속도</span>
+        <button type="button" class="btn-close ms-auto"></button>
+      </div>
+      <input type="range" name="paddle-speed" id="paddleSpeed" max="5" min="0" step="1">
+      <button class="btn btn-primary submit">확인</button>
+    </div>
+  </div>
+  <div class="item-wrap match-modal" style="display: none;">
+    <div class="map-modal d-flex flex-column justify-content-center">
+      <div class="d-flex justify-content-between">
+        <span>아이템</span>
+        <button type="button" class="btn-close ms-auto"></button>
+      </div>
+      <div class="d-flex justify-content-between item-btns">
+        <button class="btn btn-primary me-3 disuse-item">안써용</button>
+        <button class="btn btn-primary use-item">써용</button>
+      </div>
+    </div>
+  </div>
+</match-view>
+  

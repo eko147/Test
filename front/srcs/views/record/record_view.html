@@ -1,0 +1,99 @@
+<record-view class="d-flex flex-column justify-content-start view">
+	<div>
+		<nav-bar data-component="NavBar"></nav-bar>
+	</div>
+	<div class="mb-auto">
+		<div class="d-flex my-5 mx-5">
+			<h1 class="me-5 page-name">전적 조회</h1>
+		</div>
+		<div class="d-flex justify-content-center">
+      <div class="d-flex profile-card-record flex-column justify-content-between align-items-center mx-5 my-5">
+        <div class="d-flex justify-content-center">
+          <div class="position-relative">
+            <img class="user-avatar"
+              src=""
+              alt="user image">
+            <div class="status-circle">
+            </div>
+          </div>
+        </div>
+        <div class="d-flex align-items-center justify-content-center my-2">
+          <p class="px-1 mb-0 user-level"></p>
+          <p class="px-1 mb-0 user-name"></p>
+        </div>
+        <div class="d-flex justify-content-center my-2 px-2">
+          <p class="score px-2 mb-0"></p>
+        </div>
+        <div class="user-message-record d-flex justify-content-center align-items-center">
+          <p class="my-1 state-message"></p>
+        </div>
+      </div>
+      <div class="w-10">
+        <h3>1:1</h3>
+        <ul id="pvp-lists" class="d-flex flex-column scroll justify-content-start record-list align-self-center">
+          <template id="pvp-list-template">
+            <li class="d-flex py-2 my-1 record-list-element justify-content-between align-items-center">
+              <div class="winner"></div>
+              <div class="v-line"></div>
+              <div class="score-detail"></div>
+              <div class="v-line"></div>
+              <span class="score-date"></span>
+            </li>
+          </template>
+        </ul>
+      </div>
+      <div>
+        <h3>토너먼트</h3>
+        <ul id="tournament-group" class="d-flex flex-column scroll justify-content-start record-list tournament-group align-self-center">
+          <template id="tournament-list-template">
+            <li id="tournament-list" class="d-flex py-2 my-1 record-list-element justify-content-between align-items-center">
+              <div class="score-detail">winner</div>
+              <div class="score-date d-flex justify-content-center align-self-center">
+                <div class="v-line"></div>
+                <span class="tournament-time d-flex align-items-center justify-content-center"></span>
+                <button id="infoBtn" class="btn btn-primary ms-4">more info..</button>
+              </div>
+            </li>
+          </template>
+        </ul>
+      </div>
+      <div id="infoModal" class="modal">
+        <div class="modal-content">
+          <div class="d-flex justify-content-end close">
+            <button type="button" class="btn-close"></button>
+          </div>
+            <div class="d-flex justify-content-center align-items-center tournament-winner mb-5"></div>
+            <ul id="tournament-detail-list" class="d-flex flex-column justify-content-between tournament-detail-list tournament-list align-self-center">
+              <li class="d-flex py-2 my-1 record-list-element justify-content-between align-items-center">
+                <div class="tournament-play"></div>
+                <div class="info-modal-v-line"></div>
+                <div class="score-detail"></div>
+                <div class="score-date d-flex justify-content-center align-self-center">
+                  <div class="info-modal-v-line"></div>
+                  <span class="second-score-date"></span>
+                </div>
+              </li>
+              <li class="d-flex py-2 my-1 record-list-element justify-content-between align-items-center">
+                <div class="tournament-play"></div>
+                <div class="info-modal-v-line"></div>
+                <div class="score-detail"></div>
+                <div class="score-date d-flex justify-content-center align-self-center">
+                  <div class="d-flex info-modal-v-line"></div>
+                  <span class="second-score-date"></span>
+                </div>
+              </li>
+              <li class="d-flex py-2 my-1 record-list-element justify-content-between align-items-center">
+                <div class="tournament-play"></div>
+                <div class="info-modal-v-line"></div>
+                <div class="score-detail"></div>
+                <div class="score-date d-flex justify-content-center align-self-center">
+                  <div class="d-flex info-modal-v-line"></div>
+                  <span class="second-score-date"></span>
+                </div>
+              </li>
+            </ul>
+        </div>
+      </div>
+		</div>
+	</div>
+</record-view>

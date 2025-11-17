@@ -1,0 +1,28 @@
+<!-- nav-bar -->
+<nav-bar class="navbar navbar-expand-lg justify-content-between">
+  <nav class="navbar navbar-expand-lg d-flex">
+    <div class="container-fluid">
+      <a href="/" data-link class="navbar-brand">
+        <img src="./srcs/assets/logo.svg" alt="logo" class="d-inline-block align-text-top logo-image">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="navbar-nav">
+          <a class="nav-link" href="/friend" data-link>친구목록</a>
+          <a id="logout" class="nav-link" href="/login" data-link>로그아웃</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="d-flex justify-content-end">
+    <div id="nav-profile" class="nav-profile"></div>
+    <div class="d-flex justify-content-center align-self-center">
+      <p class="mb-0 mx-2 align-self-center user-level-id" style="color: white;"></p>
+      <img src="" style="width:3em; height:3em; border-radius: 50%;" id="profileCardModalBtn" class="img-button mx-3">
+    </div>
+    <profile-card data-component="ProfileCard"></profile-card>
+    </div>
+  </div>
+</nav-bar>
